@@ -16,11 +16,11 @@ function createHandsFunction() {
     const handsBlock = document.querySelector('.hands-block');
     playerHand = document.createElement('img');
     playerHand.classList.add('player-hand');
-    playerHand.src = '../rockreverse.jpg';
+    playerHand.src = 'rockreverse.jpg';
     playerHand.alt = "#";
     computerHand = document.createElement('img');
     computerHand.classList.add('computer-hand');
-    computerHand.src = '../rock.jpg';
+    computerHand.src = 'rock.jpg';
     computerHand.alt = "#";
     handsBlock.appendChild(playerHand);
     handsBlock.appendChild(computerHand);
@@ -43,13 +43,13 @@ function setHandsFunction(event) {
     playerHand.src = event.target.dataset.src;
     playerHand.setAttribute('data-choice', event.target.dataset.choice);
     if (parseInt(Math.random() * 3, 10) === 0) {
-        computerHand.src = '../rock.jpg'
+        computerHand.src = 'rock.jpg'
         computerHand.setAttribute('data-choice', 'rock')
     } else if (parseInt(Math.random() * 3, 10) === 1) {
-        computerHand.src = '../paper.jpg'
+        computerHand.src = 'paper.jpg'
         computerHand.setAttribute('data-choice', 'paper')
     } else {
-        computerHand.src = '../scissors.jpg'
+        computerHand.src = 'scissors.jpg'
         computerHand.setAttribute('data-choice', 'scissor')
     }
 }
